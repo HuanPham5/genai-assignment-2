@@ -1,0 +1,24 @@
+# Ignore all environment files
+*.env
+.*.env
+
+# Ignore Conda/virtual env directories
+env/
+.venv/
+venv/
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore Jupyter checkpoint folders
+.ipynb_checkpoints/
+
+# Ignore dataset folder
+/data/
+
+# Ignore OS junk files
+.DS_Store
+Thumbs.db
