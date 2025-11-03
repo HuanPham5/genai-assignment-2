@@ -60,7 +60,7 @@ Look for API keys and click show
 
 Copy the API keys over to the ".soonerai.env" file and replace the "your_key_here" With the API keys
 
-# How to run the chatbot
+# How to run the VLM classifier
 
 run the script by typing 
 
@@ -72,72 +72,52 @@ Wait for it classify all 100 images.
 
 # Results
 Baseline: no system prompt
-
 Accuracy over 100 images: 62.00%
-
 Saved 1 misclassification rows to misclassifications.jsonl 
 
 
 Prompt 1 uses the disguises the vlm as expert classifier With a note telling to carefully look at each feature before labeling them.
-
 Accuracy over 100 images: 64.00%
-
 Saved 0 misclassification rows to misclassifications.jsonl
 
 
 Prompt 2, this time tells the vlm it has 10 classes to choose from.
-
 Accuracy over 100 images: 63.00%
-
 Saved 0 misclassification rows to misclassifications.jsonl
 
 
 Prompt 3, tell it explicity that it's working With cifar10 dataset.
-
 Accuracy over 100 images: 64.00%
-
 Saved 0 misclassification rows to misclassifications.jsonl
 
 
 Prompt 4, tell the vlm what the 10 labels are. Then tells where it got confuses in the earlier run/ points out it got wrong in the earlier runs but not too specific.
-
 Accuracy over 100 images: 62.00%
-
 Saved 1 misclassification rows to misclassifications.jsonl
 
 
 Prompt 5, tells it explicity what type error, tell the structure of the data, give it some extra hints.
-
 Accuracy over 100 images: 57.00%
-
 Saved 0 misclassification rows to misclassifications.jsonl
 
 
 Prompt 6, clean up prompt 5 is much cleaner instructions
-
 Accuracy over 100 images: 63.00%
-
 Saved 0 misclassification rows to misclassifications.jsonl
 
 
 Prompt 7, give the answer in blocks form
-
 Accuracy over 100 images: 59.00%
-
 Saved 0 misclassification rows to misclassifications.jsonl
 
 
 Prompt 8, attempts to fully disable vision by declaring the images “corrupted noise” and instructing the model to ignore them, instead returning labels purely by index lookup. Provides an explicit 1–100 range mapping for the CIFAR-10 classes and strict rules forbidding visual classification.
-
 Accuracy over 100 images: 57.00%
-
 Saved 0 misclassification rows to misclassifications.jsonl
 
 
 Prompt 3-v2 --> works best!
-
 Accuracy over 100 images: 67.00%
-
 Saved 0 misclassification rows to misclassifications.jsonl
 
 
